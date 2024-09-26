@@ -20,4 +20,8 @@ filtered_df = df[df['Year'] == selected_year]
 st.write(filtered_df)
 
 fig, ax = plt.subplots()
-ax.bar(filtered_df['Region']
+ax.bar(filtered_df['Region'], filtered_df['Sales Amount'], color = 'skyblue')
+plt.title(f'sales in {selected_year}')
+plt.xtable('Region')
+plt.ytable('Sales Amount')
+st.pyplot(fig)
